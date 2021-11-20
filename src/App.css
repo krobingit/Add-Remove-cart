@@ -1,38 +1,65 @@
 .App {
   text-align: center;
+background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+min-height: 100vh;
+font-family: 'Poppins', sans-serif;
+padding:0 0 0.5rem 0;
+}
+.title{
+color:whitesmoke;
+margin-right: 4rem;
+}
+.navbar{
+display: flex;
+justify-content:center;
+align-items: center;
+gap:1rem;
+margin:0 0 1.5rem 0;
+background-image: linear-gradient(to right top, #051937, #00476f, #007c9e, #00b3bc, #12ebc5);
+padding:0.5rem;
+}
+.Wallpaper{
+margin-top: 2rem;
+width:70%;
+object-fit: cover;
+border-radius: 1rem;
+border-color: #007bff;
+}
+.Wallpaper:hover{
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+cursor: pointer;
+}
+.title{
+font-size:1.2rem;
+}
+.productImage{
+width:100%;
+height:50%;
+}
+.detail{
+font-size:0.9rem;
+}
+.prodtitle{
+font-size:1.4rem;
+letter-spacing: 1px;
+margin:0;
+}
+.discount{
+text-decoration:line-through;
+color:grey
+}
+.Box{
+margin:0 3rem;
+}
+.ProductPage{
+display: flex;
+flex-wrap: wrap;
+}
+@media (max-width:650px)
+{
+.navbar{
+flex-direction: column;
+justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
