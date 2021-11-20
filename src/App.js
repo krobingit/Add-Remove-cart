@@ -13,8 +13,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Rating from '@mui/material/Rating';
 import { CardActions } from '@mui/material';
+/*
 import PlusOneIcon from '@mui/icons-material/PlusOne';
-import RemoveIcon from '@mui/icons-material/Remove';
+import RemoveIcon from '@mui/icons-material/Remove';*/
 function App() {
    const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -89,8 +90,14 @@ function CartBox({ prod, befDis, price, img, rating, cartValue, setCartValue, in
   //displays AddtoCart and Remove from Cart
   const [addToCart, setAddToCart] = useState(true);
   //displays
-  const [addItems,setAddItems]=useState(false);
-
+ /*const [addItems,setAddItems]=useState(false);
+  { addToCart ? setAddItems(true) : setAddItems(false) }
+  {!addToCart ? <div>
+            <Button sx={{color:"purple"}} onClick={()=>setCartValue(cartValue+1)}><PlusOneIcon/></Button>
+            <Button sx={{ color: "purple", fontSize: "1.5rem" }} onClick={() => {
+              setCartValue(cartValue > 0 ? cartValue - 1 : cartValue = 0)
+            }}> <RemoveIcon /> </Button> </div> : ""}
+*/
 
   return (
     <section className="Box">
@@ -104,13 +111,10 @@ function CartBox({ prod, befDis, price, img, rating, cartValue, setCartValue, in
         <CardActions sx={{display:"flex",flexDirection:"column",justifyContent:"center",padding:"0 0 1rem 0"}}>
           <Button variant="contained" color="secondary" onClick={() => {
             setAddToCart(!addToCart)
-            { addToCart ? setCartValue(cartValue + 1) : setCartValue(cartValue > 0 ? cartValue=0 : cartValue=0) }
-            { addToCart ? setAddItems(true) : setAddItems(false) }
+            addToCart ? setCartValue((cartValue) => cartValue + 1) : setCartValue((cartValue) => cartValue - 1);
           console.log(index)
           }}>{addToCart ? "Add To Cart" : "Remove from Cart"}</Button>
-{addItems ? <div>
-            <Button sx={{color:"purple"}} onClick={()=>setCartValue(cartValue+1)}><PlusOneIcon/></Button>
-   <Button sx={{color:"purple",fontSize:"1.5rem"}} onClick={() => setCartValue(cartValue > 0 ? cartValue - 1 : cartValue=0)}> <RemoveIcon/> </Button> </div> : ""}
+
         </CardActions>
       </Card>
       </section>
