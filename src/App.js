@@ -98,7 +98,6 @@ function CartBox({ prod, befDis, price, img, rating, cartValue, setCartValue, in
               setCartValue(cartValue > 0 ? cartValue - 1 : cartValue = 0)
             }}> <RemoveIcon /> </Button> </div> : ""}
 */
-
   return (
     <section className="Box">
     <Card sx={{background:"rgba( 144, 19, 254, 0.15)",margin:"0.5rem",padding:"0.5rem",maxWidth:"13rem",borderRadius:"0.5rem"}}>
@@ -111,7 +110,7 @@ function CartBox({ prod, befDis, price, img, rating, cartValue, setCartValue, in
         <CardActions sx={{display:"flex",flexDirection:"column",justifyContent:"center",padding:"0 0 1rem 0"}}>
           <Button variant="contained" color="secondary" onClick={() => {
             setAddToCart(!addToCart)
-            addToCart ? setCartValue((cartValue) => cartValue + 1) : setCartValue((cartValue) => cartValue - 1);
+          addToCart ? setCartValue(cartValue + 1) : setCartValue(cartValue - 1);
           console.log(index)
           }}>{addToCart ? "Add To Cart" : "Remove from Cart"}</Button>
 
