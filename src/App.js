@@ -90,7 +90,7 @@ function CartBox({ prod, befDis, price, img, rating, cartValue, setCartValue, in
   const [addToCart, setAddToCart] = useState(true);
   //displays
   const [addItems,setAddItems]=useState(false);
-  const temp = cartValue + 1;
+
 
   return (
     <section className="Box">
