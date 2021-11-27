@@ -79,7 +79,7 @@ function App() {
       </Menu>
 
         <IconButton sx={style} variant="contained" style={{ height: "2.5rem",marginLeft: "8rem" }}
-        >Cart <ShoppingCartIcon /><StyledBadge badgeContent={cartValue} color="secondary"></StyledBadge></IconButton>
+        ><ShoppingCartIcon /><StyledBadge badgeContent={cartValue} color="secondary"></StyledBadge></IconButton>
       </nav>
       <img className="Wallpaper" alt="shopping-wallpaper" src="https://png.pngtree.com/background/20210711/original/pngtree-discounts-black-friday-background-picture-image_1155655.jpg"/>
       <Product products={products} cartValue={cartValue} setCartValue={setCartValue}/>
